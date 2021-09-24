@@ -1,0 +1,55 @@
+---
+name: Button
+menu: Components
+---
+
+import { Playground, Props } from 'docz'
+import { Button } from './Button'
+
+# Button
+
+<Props of={Button} />
+
+A button component that can be used to trigger an action.
+
+## Simple Button
+A simple button consist of a Lebel and a click handler
+<Playground>
+    <Button label={`Click me`} onClick={()=> console.log('Hi')}></Button>
+</Playground>
+
+## Themed button
+A button can be themed with the `type` prop.
+
+### Primary Button
+<Playground>
+    <Button label={`Primary`} onClick={()=> console.log('I am Primary')} type="primary"></Button>
+</Playground>
+
+### Secondary Button
+<Playground>
+    <Button label={`Secondary`} onClick={()=> console.log('I am Secondary')} type="secondary"></Button>
+</Playground>
+
+### Warning Button
+
+<Playground>
+    <Button label={`Warning`} onClick={()=> console.log('I am Warning')} type="warning"></Button>
+</Playground>
+
+### Danger Button
+
+<Playground>
+    <Button label={`Danger`} onClick={()=> console.log('I am Danger')} type="danger"></Button>
+</Playground>
+
+### Negative Button
+
+<Playground>
+    <Button label={`Cancel`} onClick={()=> console.log('I am Negative')} type="negative"></Button>
+</Playground>
+
+## Disabled Button
+<Playground>
+    <Button label={`Disabled`} onClick={()=> console.log('I am Disabled')} disabled={ true }></Button>
+</Playground>

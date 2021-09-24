@@ -1,0 +1,146 @@
+---
+name: Hobby Card
+menu: Components
+---
+
+import { Playground } from "docz";
+import { Hobby } from "./Hobby";
+
+# Hobby Card
+
+A hobby card component helps describing a hobby with its name, a short description,
+and progress.
+
+- A `Red` card indicates that a hobby needs motivations and practice to
+  push further.
+- A `Yellow` card indicates that a hobby is in progress.
+- A `Green` card indicates that a hobby is completed/going really well.
+
+The color cards are determined by a hobby weight that is in the scale from 1 to 10. 
+
+- Any weight less than 3 considered to be in `Red`. 
+- A weight between 3 and 6 considered to be in `Yellow`.
+- A weight between 7 and 10 considered to be in `Green`.
+
+You need to pass a definition object to the `Hobby` component to create a `Hobby Card`.
+
+Here is an example definition:
+
+```js
+{
+    id: "001",
+    name: "Singing",
+    description: "I love it totally",
+    weight: "9",
+    look: {
+    background: "#0eb30e",
+    color: "#FFFFFF",
+    },
+}
+```
+Then use it with the `Hobby` component as,
+
+```html
+<Hobby hobby={hobby} />
+```
+
+## 🙄 Hobby Card - Red
+
+A `Red` hobby card means that a hobby needs attention. Let's see an working example,
+
+<Playground>
+    <Hobby hobby={{
+      id: "004",
+      name: "Yoga",
+      description: "Oh, I still need to start",
+      weight: "1",
+      look: {
+        background: "#ff6b6b",
+        color: "#FFFFFF",
+      },
+    }} />
+</Playground>
+
+## 🏃‍♀️ Hobby Card - Yellow
+
+A `Yellow` hobby card means that a hobby is in-progress. Let's see an working example,
+
+<Playground>
+    <Hobby hobby={{
+      id: "003",
+      name: "Reading",
+      description: "On my way",
+      weight: "5",
+      look: {
+        background: "#efef04",
+        color: "#000",
+      },
+    }} />
+</Playground>
+
+## 🚀 Hobby Card - Green
+
+A `Green` hobby card means that a hobby is doing very well. Let's see an working example,
+
+<Playground>
+    <Hobby hobby={{
+      id: "001",
+      name: "Singing",
+      description: "I love it totally",
+      weight: "9",
+      look: {
+        background: "#0eb30e",
+        color: "#FFFFFF",
+      },
+    }} />
+</Playground>
+
+## 🤝 All Hobby Cards
+
+Here is an example of how we can loop through hobbies and create a list of hobby cards.
+
+<Playground>
+    {() => {
+        const hobbies = [
+            {
+                id: "001",
+                name: "Singing",
+                description: "I love it totally",
+                weight: "9",
+                look: {
+                    background: "#0eb30e",
+                    color: "#FFFFFF",
+                },
+            },
+            {
+                id: "003",
+                name: "Reading",
+                description: "On my way",
+                weight: "5",
+                look: {
+                    background: "#efef04",
+                    color: "#000",
+                },
+            },
+            {
+                id: "004",
+                name: "Yoga",
+                description: "Oh, I still need to start",
+                weight: "1",
+                look: {
+                    background: "#ff6b6b",
+                    color: "#FFFFFF",
+                },
+            }
+        ];
+    return (
+      <>
+        <div style={{display: 'flex'}}>
+            {hobbies.map((hobby, index) => (
+              <Hobby key={index} hobby={hobby}></Hobby>
+            ))}
+        </div>
+      </>
+    )
+  }}
+</Playground>
