@@ -1,11 +1,11 @@
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">
   <a href="https://github.com/pedronauck/docz">
-    <img alt="Gatsby" src="/static/preview.png" width="100%" />
+    <img alt="hobbyland" src="https://res.cloudinary.com/atapas/image/upload/v1632472779/demos/flow_hgywzs.gif" width="100%" />
   </a>
 </p>
 <h1 align="center">
-  Gatsby's Docz starter
+  Hobby Lannd with docz
 </h1>
 
 ## 👀 Look at [the Demo](https://gatsby-docz.netlify.com)
