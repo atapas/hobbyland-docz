@@ -1,6 +1,6 @@
 import React from "react";
 
-import "./App.css";
+import "./app.css";
 import { Button } from "./Button";
 import { Heading } from "./Heading";
 import { Hobby } from "./Hobby";
