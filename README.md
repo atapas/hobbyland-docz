@@ -95,10 +95,10 @@ Looking for more guidance? Full documentation for Docz lives on [the website](ht
 ## 💫 Deploy
 
 <a href="https://vercel.com/new/project?template=https://github.com/atapas/hobbyland-docz">
-<img src="https://vercel.com/button" height="37.5px" />
+<img src="https://vercel.com/button" height="37.5px"></img>
 </a>
 <a href="https://app.netlify.com/start/deploy?repository=https://github.com/atapas/hobbyland-docz">
-<img src="https://www.netlify.com/img/deploy/button.svg" height="37.5px" />
+<img src="https://www.netlify.com/img/deploy/button.svg" height="37.5px" ></img>
 </a>
 
 # 🤝 Contributing to `hobbyland-docz`
@@ -113,7 +113,7 @@ We all need support and motivation. `hobbyland-docz` is not an exception. Please
 If you found the app helpful, consider supporting me with a coffee.
 
 <a href="https://www.buymeacoffee.com/greenroots">
-    <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" height="50px">
+    <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" height="50px"></img>
 </a>
 
 ---
