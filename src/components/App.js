@@ -4,6 +4,7 @@ import "./app.css";
 import { Button } from "./Button";
 import { Heading } from "./Heading";
 import { Hobby } from "./Hobby";
+import { NoHobby } from "./NoHobby";
 
 
 function App() {
@@ -94,8 +95,8 @@ function App() {
               value={hobby.weight} onChange={ handleChange }/>
             <p
               style={{
-                backgroundColor: "rgb(255, 107, 107)",
-                color: "rgb(255, 255, 255)",
+                backgroundColor: hobby.look.background,
+                color: hobby.look.color,
               }}
             >
             {hobby.weight}
@@ -113,7 +114,7 @@ function App() {
           <div className="hobby-list">
             {hobbies && hobbies.length > 0 ? hobbies.map((hobby, index) => (
               <Hobby key={index} hobby={hobby} delete={(id) => deleteHobby(hobby.id)}></Hobby>
-            )): <h2>No hobbies</h2>}
+            )): <NoHobby label="No Hobbies? Oh dear, please add one to track." />}
           </div>
         </div>
       </div>
