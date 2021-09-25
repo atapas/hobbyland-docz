@@ -113,7 +113,7 @@ We all need support and motivation. `hobbyland-docz` is not an exception. Please
 If you found the app helpful, consider supporting me with a coffee.
 
 <a href="https://www.buymeacoffee.com/greenroots">
-    <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" height="50px"></img>
+    <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" height="50px" />
 </a>
 
 ---
