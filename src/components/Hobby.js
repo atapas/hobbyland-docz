@@ -19,7 +19,7 @@ export const Hobby = (props) => {
     <div className="hobby" style={{backgroundColor: props.hobby.look.background, color: props.hobby.look.color}}>
         <div className="actions">
             <span><Edit size="24" /></span>
-            <span><XCircle size="24" /></span>
+            <span><XCircle size="24" onClick={props.delete}/></span>
         </div>
         <div className="content">
           <span hidden>{props.hobby.id}</span>
