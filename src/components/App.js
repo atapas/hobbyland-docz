@@ -21,6 +21,13 @@ function App() {
     }
   });
 
+  useEffect(() => {
+    setHobby({
+      ...hobby,
+      look: getHobbyLook(hobby.weight)
+    });
+  }, [hobby.weight]);
+
   const getHobbyLook = (weight) => {
 		let background = '#ff6b6b';
 		let color = '#FFFFFF';
@@ -40,18 +47,22 @@ function App() {
       value = parseInt(value);
     }
     setHobby({...hobby, [name]: value});
-    console.log(hobby);
   };
 
   const addHobby = () => {
     setHobby({
       ...hobby,
-      id: generate(),
-      look: getHobbyLook(hobby.weight)
+      id: generate()
     });
     setHobbies([...hobbies, hobby]);
     console.log(hobbies);
     // saveToLS('hobbies', hobbies);
+  }
+
+  const deleteHobby = (id) => {
+    console.log('deleting hobby with id', id);
+    setHobbies(hobbies.filter(hobby => hobby.id !== id));
+    // saveToLS('hobbies', hobbies);  
   }
 
   return (
@@ -101,7 +112,7 @@ function App() {
           <h3>Track your hobbies to get better at it </h3>
           <div className="hobby-list">
             {hobbies && hobbies.length > 0 ? hobbies.map((hobby, index) => (
-              <Hobby key={index} hobby={hobby}></Hobby>
+              <Hobby key={index} hobby={hobby} delete={(id) => deleteHobby(hobby.id)}></Hobby>
             )): <h2>No hobbies</h2>}
           </div>
         </div>
