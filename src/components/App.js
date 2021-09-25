@@ -4,10 +4,12 @@ import "./app.css";
 import { Button } from "./Button";
 import { Heading } from "./Heading";
 import { Hobby } from "./Hobby";
-import { saveToLS, readFromLS } from '../utils/storage'; 
+
 
 function App() {
-  const [hobbies, setHobbies] = useState(JSON.parse(readFromLS('hobbies')) || []);
+  
+ 
+  const [hobbies, setHobbies] = useState([]);
   const [hobby, setHobby] = useState({
     id: '', 
     name: '', 
@@ -18,11 +20,6 @@ function App() {
         color: ''
     }
   });
-
-  useEffect(() => {  
-      saveToLS('hobbies', hobbies);
-  }, [hobbies]);
-
 
   const getHobbyLook = (weight) => {
 		let background = '#ff6b6b';
@@ -38,18 +35,11 @@ function App() {
 	}
 
   const handleChange = (e) => {
-    setHobby({
-      ...hobby,
-      [e.target.name]: e.target.value
-    });
-
-    /*if (e.target.name === 'weight') {
-      setHobby({
-        ...hobby,
-        look: getHobbyLook(e.target.value)
-      });
-    }*/
-
+    let { name, value } = e.target;
+    if (name === 'weight') {
+      value = parseInt(value);
+    }
+    setHobby({...hobby, [name]: value});
     console.log(hobby);
   };
 
@@ -61,6 +51,7 @@ function App() {
     });
     setHobbies([...hobbies, hobby]);
     console.log(hobbies);
+    // saveToLS('hobbies', hobbies);
   }
 
   return (
@@ -109,7 +100,7 @@ function App() {
           <h2>Hobbies</h2>
           <h3>Track your hobbies to get better at it </h3>
           <div className="hobby-list">
-            {hobbies.length > 0 ? hobbies.map((hobby, index) => (
+            {hobbies && hobbies.length > 0 ? hobbies.map((hobby, index) => (
               <Hobby key={index} hobby={hobby}></Hobby>
             )): <h2>No hobbies</h2>}
           </div>
