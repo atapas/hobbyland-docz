@@ -8,28 +8,23 @@
   Hobby Lannd with docz
 </h1>
 
-## 👀 Look at [the Demo](https://gatsby-docz.netlify.com)
+## 👀 Look at [the Demo](https://hobbyland-docz.vercel.app/)
 
-Start to write your library documentation or your design system with Docz and Gatsby in a very simple way with this starter.
-It's included in it some basic setup using [gatsby-theme-docz](https://github.com/pedronauck/docz/tree/master/core/gatsby-theme-docz) and a blog using Gatsby features.
+`Hobby Land` is a place to keep track of your hobbies. Add hobbies that are going well, just started, or need further pushes.
+
+When you add a hobby to the Hobby Land, you provide a rank or weightage. The higher the rank, the better you are doing with the hobby. Lower-ranked hobbies need attention. Hobby Land reminds you that you need to get better at your hobbies.
 
 ## 🚀 Quick start
 
-1.  **Create a Gatsby site.**
-
-    Use the Gatsby CLI to create a new site, specifying this starter.
-
-    ```sh
-    # create a new Gatsby site using the Docz starter
-    gatsby new coolest-library https://github.com/pedronauck/gatsby-starter-docz
-    ```
+1.  **Clone the repository**
 
 1.  **Start developing.**
 
-    Navigate into your new site’s directory and start it up.
+    Navigate into your project directory and start it up.
 
     ```sh
-    cd coolest-library
+    cd hobbyland-docz
+    yarn install
     gatsby develop
     ```
 
@@ -39,7 +34,7 @@ It's included in it some basic setup using [gatsby-theme-docz](https://github.co
 
     _Note: You'll also see a second link: _`http://localhost:8000/___graphql`_. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.org/tutorial/part-five/#introducing-graphiql)._
 
-    Open the `coolest-library` directory in your code editor of choice and edit both `src/pages`, `/blog` or `/docs`.
+    Open the `hobbyland-docz` directory in your code editor of choice and edit both `src/pages`, `src/components`.
     Save your changes, add some posts or new documents and the browser will update in real time!
 
 ## 🧐 What's inside?
@@ -49,7 +44,6 @@ A quick look at the top-level files and directories you'll see in a Gatsby proje
     .
     ├── node_modules
     ├── blog
-    ├── docs
     ├── src
     ├── .gitignore
     ├── .prettierrc
@@ -65,8 +59,6 @@ A quick look at the top-level files and directories you'll see in a Gatsby proje
 1.  **`/node_modules`**: This directory contains all of the modules of code that your project depends on (npm packages) are automatically installed.
 
 2.  **`/blog`**: This directory will contain all your blog posts writted using [mdx](http://mdxjs.com).
-
-3.  **`/docs`**: This directory it's just an example how you can add documentation for Docz. So, instead of have just one directory with your documentation, you can put wherever you want your documents since Docz don't need to have a specific folder for that. So, by default inside the `doczrc.js` configuration file, we're ignoring `.mdx` inside `blog/` folder.
 
 4.  **`/src`**: This directory will contain all of the code related to what you will see on the front-end of your site (what you see in the browser) such as your site header or a page template. `src` is a convention for “source code”.
 
@@ -102,6 +94,33 @@ Looking for more guidance? Full documentation for Docz lives on [the website](ht
 
 ## 💫 Deploy
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-blog)
+<a href="https://vercel.com/new/project?template=https://github.com/atapas/hobbyland-docz">
+<img src="https://vercel.com/button" height="37.5px" />
+</a>
+<a href="https://app.netlify.com/start/deploy?repository=https://github.com/atapas/hobbyland-docz">
+<img src="https://www.netlify.com/img/deploy/button.svg" height="37.5px" />
+</a>
+
+# 🤝 Contributing to `hobbyland-docz`
+Any kind of positive contribution is welcome! Please help us to grow by contributing to the project.
+
+> Please read [`CONTRIBUTING`](CONTRIBUTING.md) for details on our [`CODE OF CONDUCT`](CODE_OF_CONDUCT.md), and the process for submitting pull requests to us.
+
+# 🙏 Support
+
+We all need support and motivation. `hobbyland-docz` is not an exception. Please give this project a ⭐️ to encourage and show that you liked it. 
+
+If you found the app helpful, consider supporting me with a coffee.
+
+<a href="https://www.buymeacoffee.com/greenroots">
+    <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" height="50px">
+</a>
+
+---
+
+<h3 align="center">
+A ⭐️ to <b>hobbyland-docz</b> is must.
+</h3>
+
 
 <!-- AUTO-GENERATED-CONTENT:END -->
